@@ -1,0 +1,16 @@
+name: empty permission
+
+on:
+  pull_request:
+    branches: main
+# permissions: {}
+permissions:
+  contents: none
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: none
+    steps:
+      - uses: actions/checkout@v3
+      - run: cat README.md
