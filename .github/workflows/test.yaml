@@ -3,7 +3,9 @@ name: empty permission
 on:
   pull_request:
     branches: main
-permissions: {}
+# permissions: {}
+permissions:
+  contents: none
 jobs:
   test:
     runs-on: ubuntu-latest
