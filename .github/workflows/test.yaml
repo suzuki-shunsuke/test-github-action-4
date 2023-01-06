@@ -1,0 +1,11 @@
+name: empty permission
+
+on:
+  pull_request:
+    branches: main
+permissions: {}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
