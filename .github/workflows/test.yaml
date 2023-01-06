@@ -1,0 +1,15 @@
+name: empty permission
+
+on:
+  pull_request:
+    branches: main
+permissions: {}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: none
+    steps:
+      - run: exit 1
+        continue-on-error: true
+      - run: echo hello
